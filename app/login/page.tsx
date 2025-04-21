@@ -1,82 +1,3 @@
-// 'use client';
-
-// import { useState } from "react";
-// import { signIn } from "supertokens-auth-react/recipe/emailpassword";
-// import { useRouter } from "next/navigation";
-
-// export default function Login() {
-//     const router = useRouter();
-//     const [email, setEmail] = useState("");
-//     const [password, setPassword] = useState("");
-//     const [error, setError] = useState("");
-
-//     async function handleLogin(e: React.FormEvent) {
-//         e.preventDefault();
-//         const res = await signIn({ formFields: [{ id: "email", value: email }, { id: "password", value: password }] });
-
-//         if (res.status === "FIELD_ERROR") {
-//             setError(res.formFields[0].error);
-//         } else if (res.status === "WRONG_CREDENTIALS_ERROR") {
-//             setError("Invalid credentials");
-//         } else if (res.status === "OK") {
-//             router.push("/dashboard"); // or wherever you want
-//         }
-//     }
-
-//     return (
-//         <form onSubmit={handleLogin}>
-//             <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
-//             <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
-//             <button type="submit">Login</button>
-//             {error && <p>{error}</p>}
-//         </form>
-//     );
-// }
-
-
-
-// "use client";
-
-// import { signIn } from "supertokens-auth-react/recipe/emailpassword";
-// import { useState } from "react";
-
-// export default function Login() {
-//     const [email, setEmail] = useState('');
-//     const [password, setPassword] = useState('');
-//     const [error, setError] = useState('');
-
-//     async function handleLogin(e) {
-//         e.preventDefault();
-//         let response = await signIn({
-//             formFields: [
-//                 { id: "email", value: email },
-//                 { id: "password", value: password }
-//             ]
-//         });
-
-//         if (response.status === "OK") {
-//             window.location.href = "/profile";
-//         } else {
-//             setError(response.message || "Login failed");
-//         }
-//     }
-
-//     return (
-//         <div>
-//             <h1>Login</h1>
-//             <form onSubmit={handleLogin}>
-//                 <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
-//                 <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
-//                 <button type="submit">Login</button>
-//             </form>
-//             {error && <p>{error}</p>}
-//         </div>
-//     );
-// }
-
-
-
-
 
 
 "use client";
@@ -88,7 +9,9 @@ import {Button, Form, Input} from 'antd'
 import { signIn } from "supertokens-web-js/recipe/emailpassword";
 import { useRouter } from 'next/navigation';
 import '../styles/style.scss'
-const login = () => {
+
+
+export default function login() {
 
 const router = useRouter();
 const [loading, setLoading] = useState(false);
@@ -135,48 +58,6 @@ async function signInClicked(values:any) {
 }
   return (
     <>
-{/* 
-    <div className="auth-page">
-        <div className="g1">
-        <div className="auth-form">
-        <h1>Login</h1>
-              
-          <Form layout="vertical" onFinish={signInClicked}>
-          <Form.Item label="Email" name = "email" 
-              rules={[{ required: true, message: 'Please enter your email!' }]}>
-                <Input type='email'/>
-              </Form.Item>
-
-              <Form.Item label="Password" name = "password"
-              rules={[{ required: true, message: 'Please enter password!' }]}>
-                <Input.Password />
-              </Form.Item>
-          <Button type="primary" htmlType="submit" loading={loading}>
-            Login
-          </Button>
-        </Form>
-
-        <div className="mt-4 text-center">
-          <p>
-          Don't Have an Account ?{" "}
-          <Link href="/register" className="text-blue-500 hover:underline">Register</Link>
-          </p>
-        </div>
-        </div>
-        </div>
-    </div>
- */}
-
-
-
-
-
-
-
-
-
-
-
     {/* <div className="flex flex-col items-center justify-center min-h-screen p-6">
       <div className="w-full max-w-md bg-white rounded-xl shadow-md p-8">
         <h1 className="text-2xl font-bold mb-6 text-center">Login</h1>
@@ -242,4 +123,4 @@ async function signInClicked(values:any) {
   )
 }
 
-export default login;
+// export default login;

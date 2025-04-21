@@ -1,10 +1,3 @@
-// 'use client';
-
-// import { useState } from "react";
-// import { signUp } from "supertokens-auth-react/recipe/emailpassword";
-// import { useRouter } from "next/navigation";
-
-
 
 
 "use client";
@@ -160,35 +153,3 @@ export default function Register() {
 
 
 
-
-
-
-
-// export default function Register() {
-//     const router = useRouter();
-//     const [email, setEmail] = useState("");
-//     const [password, setPassword] = useState("");
-//     const [error, setError] = useState("");
-
-//     async function handleRegister(e: React.FormEvent) {
-//         e.preventDefault();
-//         const res = await signUp({ formFields: [{ id: "email", value: email }, { id: "password", value: password }] });
-
-//         if (res.status === "FIELD_ERROR") {
-//             setError(res.formFields[0].error);
-//         } else if (res.status === "EMAIL_ALREADY_EXISTS_ERROR") {
-//             setError("Email already exists");
-//         } else if (res.status === "OK") {
-//             router.push("/login"); // or auto-login
-//         }
-//     }
-
-//     return (
-//         <form onSubmit={handleRegister}>
-//             <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
-//             <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
-//             <button type="submit">Register</button>
-//             {error && <p>{error}</p>}
-//         </form>
-//     );
-// }
