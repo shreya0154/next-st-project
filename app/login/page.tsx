@@ -11,7 +11,7 @@ import { useRouter } from 'next/navigation';
 import '../styles/style.scss'
 
 
-export default function login() {
+export default function Login() {
 
 const router = useRouter();
 const [loading, setLoading] = useState(false);
