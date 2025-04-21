@@ -3,7 +3,7 @@ import Session from "supertokens-auth-react/recipe/session";
 import { appInfo } from "./appInfo";
 import { useRouter } from "next/navigation";
 import { SuperTokensConfig } from "supertokens-auth-react/lib/build/types";
-// import { EmailPasswordPreBuiltUI } from "supertokens-auth-react/recipe/emailpassword/prebuiltui";
+import { EmailPasswordPreBuiltUI } from "supertokens-auth-react/recipe/emailpassword/prebuiltui";
 
 const routerInfo: { router?: ReturnType<typeof useRouter>; pathName?: string } = {};
 
