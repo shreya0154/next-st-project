@@ -109,7 +109,7 @@ async function signInClicked(values:any) {
 
         <div className="mt-4 text-center">
           <p>
-          Don't Have an Account ?{" "}
+          Don&apos;t Have an Account ?{" "}
           <Link href="/register" className="text-blue-500 hover:underline">Register</Link>
           </p>
         </div>
